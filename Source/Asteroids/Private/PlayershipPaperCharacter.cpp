@@ -3,5 +3,5 @@
 
 #include "PlayershipPaperCharacter.h"
 
-APlayershipPaperCharacter::APlayershipPaperCharacter(): playerMoveSpeed(5), playerRotateSpeed(2) {}
+
 
