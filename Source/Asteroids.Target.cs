@@ -11,5 +11,6 @@ public class AsteroidsTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("Asteroids");
+		ExtraModuleNames.Add("SpaceshipCore");
 	}
 }
