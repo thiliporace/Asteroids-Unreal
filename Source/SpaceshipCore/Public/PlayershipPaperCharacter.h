@@ -10,6 +10,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "GameFramework/FloatingPawnMovement.h"
 
 //Tem que ficar por ultimo
 #include "PlayershipPaperCharacter.generated.h"
@@ -26,10 +27,9 @@ public:
     APlayershipPaperCharacter();
 
 private:
-    const int MAX_PLAYER_MOVE_SPEED = 5;
     const int MAX_PLAYER_ROTATE_SPEED = 3;
     
-    int playerMoveSpeed, playerRotateSpeed;
+    int playerRotateSpeed;
 
     float rotateAmount;
 protected:

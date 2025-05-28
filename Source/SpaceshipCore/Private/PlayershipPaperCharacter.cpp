@@ -6,13 +6,23 @@
 #include <iostream>
 #include <ostream>
 
-APlayershipPaperCharacter::APlayershipPaperCharacter(): playerMoveSpeed(MAX_PLAYER_MOVE_SPEED), playerRotateSpeed(MAX_PLAYER_ROTATE_SPEED), rotateAmount(0) {
+APlayershipPaperCharacter::APlayershipPaperCharacter(): rotateAmount(0) {
 	PrimaryActorTick.bCanEverTick = true;
 }
 
 void APlayershipPaperCharacter::BeginPlay() {
 	//Garante que o codigo da classe base tambem e chamado
 	Super::BeginPlay();
+
+	//Pegar componente adicionado na blueprint (no construtor ele ainda nao foi adicionado)
+	UFloatingPawnMovement* floatingMovementComponent = FindComponentByClass<UFloatingPawnMovement>();
+
+	if (floatingMovementComponent) {
+		playerRotateSpeed = floatingMovementComponent->TurningBoost;
+	}
+	else {
+		UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu pegar Floating Pawn Movement"));
+	}
 
 	//Pegar o subsistema do Enhanced Input
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller)) {
@@ -47,25 +57,23 @@ void APlayershipPaperCharacter::SetupPlayerInputComponent(class UInputComponent*
 
 void APlayershipPaperCharacter::Move(const FInputActionValue& Value) {
 	const FVector upVector = GetActorUpVector();
-	float movementAmount = Value.Get<float>();
 	
-	AddMovementInput(upVector, movementAmount * playerMoveSpeed); //Faltando deltaTime (?)
-	
-	UE_LOG(LogTemp, Log, TEXT("%f"),movementAmount * playerRotateSpeed);
+	AddMovementInput(upVector); //Um Paper Character já usa Delta Time por padrão, não precisa botar aqui
 }
 
 void APlayershipPaperCharacter::Rotate(const FInputActionValue& Value) {
 	float rotateDirection = Value.Get<float>();
-	//UE_LOG(LogTemp, Log, TEXT("%f"),rotateDirection);
 	
 	rotateAmount += rotateDirection * playerRotateSpeed;
 	
 	FRotator newRotation = FRotator(GetControlRotation().Pitch, rotateAmount, GetControlRotation().Yaw); //Faltando deltaTime (?)
 	UE_LOG(LogTemp, Log, TEXT("%f"),newRotation.Yaw);
 
-	UCapsuleComponent* capsuleComponent = GetCapsuleComponent();
-	capsuleComponent->SetWorldRotation(newRotation);
-	SetActorRotation(newRotation);
+	//UCapsuleComponent* capsuleComponent = GetCapsuleComponent();
+	//capsuleComponent->SetWorldRotation(newRotation);
+	
+	//SetActorRotation(newRotation);
+	SetActorRelativeRotation(newRotation);
 }
 
 
