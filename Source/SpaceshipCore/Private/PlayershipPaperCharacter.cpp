@@ -62,18 +62,20 @@ void APlayershipPaperCharacter::Move(const FInputActionValue& Value) {
 }
 
 void APlayershipPaperCharacter::Rotate(const FInputActionValue& Value) {
+	float deltaTime = GetWorld()->GetDeltaSeconds();
 	float rotateDirection = Value.Get<float>();
 	
-	rotateAmount += rotateDirection * playerRotateSpeed;
+	rotateAmount += rotateDirection * playerRotateSpeed * deltaTime;
 	
-	FRotator newRotation = FRotator(GetControlRotation().Pitch, rotateAmount, GetControlRotation().Yaw); //Faltando deltaTime (?)
-	UE_LOG(LogTemp, Log, TEXT("%f"),newRotation.Yaw);
+	//FRotator newRotation = FRotator(GetControlRotation().Pitch, rotateAmount, GetControlRotation().Roll);
+	FRotator currentRotation = GetActorRotation();
+	currentRotation.Roll += rotateAmount;
+	UE_LOG(LogTemp, Log, TEXT("%f"),rotateAmount);
 
 	//UCapsuleComponent* capsuleComponent = GetCapsuleComponent();
 	//capsuleComponent->SetWorldRotation(newRotation);
 	
-	//SetActorRotation(newRotation);
-	SetActorRelativeRotation(newRotation);
+	SetActorRotation(currentRotation);
 }
 
 
