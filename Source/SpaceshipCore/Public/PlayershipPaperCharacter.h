@@ -27,11 +27,9 @@ public:
     APlayershipPaperCharacter();
 
 private:
-    const int MAX_PLAYER_ROTATE_SPEED = 3;
-    
     int playerRotateSpeed;
-
     float rotateAmount;
+    
 protected:
     virtual void BeginPlay() override;
     virtual void Tick(float DeltaTime) override;
@@ -49,4 +47,10 @@ protected:
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
     UInputAction* RotateAction;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    bool isRotating;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    bool isMoving;
 };

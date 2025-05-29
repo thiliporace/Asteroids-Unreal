@@ -56,16 +56,17 @@ void APlayershipPaperCharacter::SetupPlayerInputComponent(class UInputComponent*
 }
 
 void APlayershipPaperCharacter::Move(const FInputActionValue& Value) {
+	if (isRotating) return;
 	const FVector upVector = GetActorUpVector();
-	
 	AddMovementInput(upVector); //Um Paper Character já usa Delta Time por padrão, não precisa botar aqui
 }
 
 void APlayershipPaperCharacter::Rotate(const FInputActionValue& Value) {
+	if (isMoving) return;
 	float deltaTime = GetWorld()->GetDeltaSeconds();
 	float rotateDirection = Value.Get<float>();
 	
-	rotateAmount += rotateDirection * playerRotateSpeed * deltaTime;
+	rotateAmount = rotateDirection * playerRotateSpeed * deltaTime;
 	
 	//FRotator newRotation = FRotator(GetControlRotation().Pitch, rotateAmount, GetControlRotation().Roll);
 	FRotator currentRotation = GetActorRotation();
