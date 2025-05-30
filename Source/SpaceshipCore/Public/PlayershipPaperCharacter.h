@@ -6,11 +6,7 @@
 #include "PaperCharacter.h"
 #include "InputAction.h"
 #include "InputMappingContext.h"
-#include "EnhancedInputComponent.h"
-#include "EnhancedInputSubsystems.h"
-#include "GameFramework/CharacterMovementComponent.h"
-#include "Components/CapsuleComponent.h"
-#include "GameFramework/FloatingPawnMovement.h"
+#include "PlayerBulletActor.h"
 
 //Tem que ficar por ultimo
 #include "PlayershipPaperCharacter.generated.h"
@@ -32,12 +28,13 @@ private:
     
 protected:
     virtual void BeginPlay() override;
-    virtual void Tick(float DeltaTime) override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     void Move(const FInputActionValue& Value);
     
     void Rotate(const FInputActionValue& Value);
+
+    void ShootBullet(const FInputActionValue& Value);
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
     UInputMappingContext* DefaultMappingContext;
@@ -48,9 +45,21 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
     UInputAction* RotateAction;
 
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
+    UInputAction* ShootBulletAction;
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     bool isRotating;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     bool isMoving;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bullet")
+    float delayBetweenShots;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    bool isShooting;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Bullet")
+    TSubclassOf<APlayerBulletActor> playerBulletActor;
 };

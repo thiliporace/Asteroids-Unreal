@@ -12,5 +12,6 @@ public class AsteroidsTarget : TargetRules
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("Asteroids");
 		ExtraModuleNames.Add("SpaceshipCore");
+		ExtraModuleNames.Add("Meteors");
 	}
 }

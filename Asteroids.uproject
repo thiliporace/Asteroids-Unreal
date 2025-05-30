@@ -12,6 +12,14 @@
 		{
 			"Name": "SpaceshipCore",
 			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		},
+		{
+			"Name": "Meteors",
+			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
 	],

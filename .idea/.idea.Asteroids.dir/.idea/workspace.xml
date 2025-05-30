@@ -9,9 +9,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7acf77a3-0414-466d-8449-4df2917bb5b6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asteroids.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip_Flipbook.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip_Sprite.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Input/IMC_Default.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/map.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/map.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Asteroids.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Asteroids.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Asteroids/Asteroids.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Asteroids/Asteroids.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/AsteroidsEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/AsteroidsEditor.Target.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" afterDir="false" />
     </list>
@@ -22,6 +29,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Meteors/Meteors.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Meteors/Private/MeteorsModule.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayerBulletActor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -132,7 +149,13 @@
       <workItem from="1748461307971" duration="54000" />
       <workItem from="1748461411267" duration="2358000" />
       <workItem from="1748472189516" duration="1036000" />
-      <workItem from="1748521551790" duration="3356000" />
+      <workItem from="1748521551790" duration="20176000" />
+      <workItem from="1748614223532" duration="100000" />
+      <workItem from="1748614493126" duration="75000" />
+      <workItem from="1748615864719" duration="217000" />
+      <workItem from="1748616585170" duration="958000" />
+      <workItem from="1748617696171" duration="410000" />
+      <workItem from="1748628039072" duration="6392000" />
     </task>
     <servers />
   </component>
