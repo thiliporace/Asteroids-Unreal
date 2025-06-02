@@ -10,17 +10,12 @@
     <list default="true" id="7acf77a3-0414-466d-8449-4df2917bb5b6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip_Flipbook.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/playerShip_Sprite.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_EnemySpawner.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_EnemySpawner.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MeteorActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MeteorActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerBulletActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerBulletActor.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Input/IMC_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/map.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/map.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Asteroids.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Asteroids.Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Asteroids/Asteroids.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Asteroids/Asteroids.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/AsteroidsEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/AsteroidsEditor.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Meteors/Private/MeteorActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Meteors/Private/MeteorActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +26,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Asteroids.Target.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Asteroids/Asteroids.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Asteroids/Private/LifeSystemComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Asteroids/Public/LifeSystemComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Meteors/Meteors.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Meteors/Private/MeteorActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Meteors/Private/MeteorsModule.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Meteors/Public/MeteorActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayerBulletActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Private/PlayershipPaperCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayerBulletActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SpaceshipCore/Public/PlayershipPaperCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -60,7 +62,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C/C++&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -155,7 +157,10 @@
       <workItem from="1748615864719" duration="217000" />
       <workItem from="1748616585170" duration="958000" />
       <workItem from="1748617696171" duration="410000" />
-      <workItem from="1748628039072" duration="6392000" />
+      <workItem from="1748628039072" duration="6515000" />
+      <workItem from="1748872558818" duration="5231000" />
+      <workItem from="1748882210078" duration="1144000" />
+      <workItem from="1748883373779" duration="6141000" />
     </task>
     <servers />
   </component>

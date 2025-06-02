@@ -79,10 +79,11 @@ void APlayershipPaperCharacter::ShootBullet(const FInputActionValue& Value) {
 	if (playerBulletActor)
 	{
 		APlayerBulletActor* newBullet = GetWorld()->SpawnActor<APlayerBulletActor>(
-			playerBulletActor, GetActorLocation() + GetActorUpVector() * 25, GetActorRotation());
+			playerBulletActor, GetActorLocation() + GetActorUpVector() * 35, GetActorRotation());
 		
 		if (newBullet) {
 			newBullet->InitializeBullet(GetActorUpVector());
+			isShooting = true;
 		}
 		else UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu spawnar o Player Bullet Actor"));
 	}

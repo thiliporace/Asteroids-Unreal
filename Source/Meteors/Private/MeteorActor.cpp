@@ -18,8 +18,9 @@ void AMeteorActor::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Projectile Movement Component is null!"), this);
 		return;
 	}
-	projectileMovementComponent->InitialSpeed = FMath::RandRange(120, 350);
-	projectileMovementComponent->Velocity = projectileMovementComponent->InitialSpeed * FMath::VRand();
+	projectileMovementComponent->InitialSpeed = FMath::RandRange(200, 500);
+	FVector random2DVector = FVector(0, FMath::VRand().Y, FMath::VRand().Z);
+	projectileMovementComponent->Velocity = projectileMovementComponent->InitialSpeed * random2DVector;
 	//UE_LOG(LogTemp, Log, TEXT("%s"),*projectileMovementComponent->Velocity.ToString());
 }
 
