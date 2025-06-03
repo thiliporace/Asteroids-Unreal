@@ -21,6 +21,7 @@ class SPACESHIPCORE_API APlayershipPaperCharacter : public APaperCharacter
     GENERATED_BODY()
 public:
     APlayershipPaperCharacter();
+    virtual void PossessedBy(AController* NewController) override;
 
 private:
     int playerRotateSpeed;

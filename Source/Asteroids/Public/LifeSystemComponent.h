@@ -20,6 +20,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LifeSystem")
 	int health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LifeSystem")
+	float invincibilityTimer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LifeSystem")
+	bool canTakeDamage;
 	
 protected:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)

@@ -14,6 +14,10 @@ APlayershipPaperCharacter::APlayershipPaperCharacter(): rotateAmount(0) {}
 void APlayershipPaperCharacter::BeginPlay() {
 	//Garante que o codigo da classe base tambem e chamado
 	Super::BeginPlay();
+}
+
+void APlayershipPaperCharacter::PossessedBy(AController* NewController) {
+	Super::PossessedBy(NewController);
 
 	//Pegar componente adicionado na blueprint (no construtor ele ainda nao foi adicionado)
 	UFloatingPawnMovement* floatingMovementComponent = FindComponentByClass<UFloatingPawnMovement>();
@@ -27,10 +31,11 @@ void APlayershipPaperCharacter::BeginPlay() {
 
 	//Pegar o subsistema do Enhanced Input
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller)) {
+		
 		if (UEnhancedInputLocalPlayerSubsystem* Subsystem =
 			ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer())) {
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
-		}
+			}
 		else {
 			UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu criar Mapping Context"));
 		}
@@ -41,6 +46,7 @@ void APlayershipPaperCharacter::BeginPlay() {
 		UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu achar o Player Controller"));
 	}
 }
+
 
 void APlayershipPaperCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) {
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
