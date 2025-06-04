@@ -4,10 +4,6 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "GameFramework/FloatingPawnMovement.h"
-#include "Components/SphereComponent.h"
-
-#include <iostream>
-#include <ostream>
 
 APlayershipPaperCharacter::APlayershipPaperCharacter(): rotateAmount(0) {}
 
@@ -52,7 +48,6 @@ void APlayershipPaperCharacter::SetupPlayerInputComponent(class UInputComponent*
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayershipPaperCharacter::Move);
 		EnhancedInputComponent->BindAction(RotateAction, ETriggerEvent::Triggered, this, &APlayershipPaperCharacter::Rotate);
-		EnhancedInputComponent->BindAction(ShootBulletAction, ETriggerEvent::Triggered, this, &APlayershipPaperCharacter::ShootBullet);
 	}
 	else {
 		UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu setar InputComponent do Player"));
@@ -78,24 +73,6 @@ void APlayershipPaperCharacter::Rotate(const FInputActionValue& Value) {
 	//UE_LOG(LogTemp, Log, TEXT("%f"),rotateAmount);
 	
 	SetActorRotation(currentRotation);
-}
-
-void APlayershipPaperCharacter::ShootBullet(const FInputActionValue& Value) {
-	if (isShooting) return;
-	if (playerBulletActor)
-	{
-		APlayerBulletActor* newBullet = GetWorld()->SpawnActor<APlayerBulletActor>(
-			playerBulletActor, GetActorLocation() + GetActorUpVector() * 35, GetActorRotation());
-		
-		if (newBullet) {
-			newBullet->InitializeBullet(GetActorUpVector());
-			isShooting = true;
-		}
-		else UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu spawnar o Player Bullet Actor"));
-	}
-	else {
-		UE_LOG(LogTemp, Warning, TEXT("Nao conseguiu criar o Player Bullet Actor"));
-	}
 }
 
 

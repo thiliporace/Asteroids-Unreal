@@ -6,7 +6,6 @@
 #include "PaperCharacter.h"
 #include "InputAction.h"
 #include "InputMappingContext.h"
-#include "PlayerBulletActor.h"
 
 //Tem que ficar por ultimo
 #include "PlayershipPaperCharacter.generated.h"
@@ -35,8 +34,6 @@ protected:
     
     void Rotate(const FInputActionValue& Value);
 
-    void ShootBullet(const FInputActionValue& Value);
-
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
     UInputMappingContext* DefaultMappingContext;
 
@@ -60,7 +57,4 @@ protected:
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     bool isShooting;
-
-    UPROPERTY(EditDefaultsOnly, Category = "Bullet")
-    TSubclassOf<APlayerBulletActor> playerBulletActor;
 };
