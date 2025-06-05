@@ -9,11 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7acf77a3-0414-466d-8449-4df2917bb5b6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MeteorActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MeteorActor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerBulletActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerBulletActor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/MyPlayershipPaperCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/WidgetBlueprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/WidgetBlueprint.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +155,7 @@
       <workItem from="1748882210078" duration="1144000" />
       <workItem from="1748883373779" duration="10598000" />
       <workItem from="1748957465144" duration="16359000" />
-      <workItem from="1749050565787" duration="6835000" />
+      <workItem from="1749050565787" duration="7441000" />
     </task>
     <servers />
   </component>
